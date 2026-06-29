@@ -102,6 +102,7 @@ export function decodeResourceRecord(buf: Uint8Array, offset: number): { rr: DNS
       class: rclass,
       ttl,
       rdata,
+      rdataOffset: offset - rdlength,
     },
     offset,
   };

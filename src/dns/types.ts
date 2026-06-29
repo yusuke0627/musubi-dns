@@ -30,6 +30,7 @@ export interface DNSResourceRecord {
   class: number;
   ttl: number;
   rdata: Uint8Array;
+  rdataOffset?: number;
 }
 
 export interface DNSPacket {
@@ -38,4 +39,5 @@ export interface DNSPacket {
   answers: DNSResourceRecord[];
   authorities: DNSResourceRecord[];
   additionals: DNSResourceRecord[];
+  raw?: Uint8Array;
 }
